@@ -8,49 +8,101 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+//Layer definitions
+#define BASE 0
+#define RAISE 1
+#define LOWER 2
+#define GAME 3
+#define GAMERAISE 4
+#define ADJUST 5
+
 / {
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                base {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | GUI |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | TAB |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
+//                   | ALT | LWR | SPC |   | SHF | RSE  | ENT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+    &kp ESC     &kp Q   &kp W   &kp E       &kp R       &kp T       /**/    &kp Y       &kp U       &kp I       &kp O   &kp P       &kp BSPC  
+    &kp LGUI    &kp A   &kp S   &kp D       &kp F       &kp G       /**/    &kp H       &kp J       &kp K       &kp L   &kp SEMI    &kp SQT   
+    &kp TAB     &kp Z   &kp X   &kp C       &kp V       &kp B       /**/    &kp N       &kp M       &kp COMMA   &kp DOT &kp FSLH    &kp ENTER
+                                &kp LALT    &mo LOWER   &kp SPACE   /**/    &kp LSHFT   &mo RAISE   &kp ENTER
                         >;
                 };
-                lower_layer {
+                raise {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
+// |      | HME | PGU | PGD | END | XXX |   | XXX | LFT | DWN |  UP | RGT |      |
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5            &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans            &trans   &trans   &trans &trans    &trans &trans
-                                        &kp LGUI     &trans       &kp SPACE         &kp RET &trans &kp RALT
+    &trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5  /**/    &kp N6  &kp N7      &kp N8      &kp N9  &kp N0      &DEL  
+    &trans  &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &none   /**/    &none   &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT   &trans
+    &trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5  /**/    &kp F6  &kp F7      &kp F8      &kp F9  &kp F10     &trans
+                                    &trans      &mo ADJUST  &trans  /**/    &trans  &trans      &trans
                         >;
                 };
 
-                raise_layer {
+                lower {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
+// |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  {  |  }  |      |
+// |      |  -  |  _  |  =  |  +  |  `  |   |  ~  |  (  |  )  |  [  |  ]  |      |
+// |      |     |     |     |     |     |   | PLY |  V+ |  V- | MTE |  \  |      | // TODO: Fix this row when &mkp is committed
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans    &trans  &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &kp GRAVE
-   &kp LSHFT &trans    &trans  &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH &kp TILDE
-                                   &kp LGUI &trans &kp SPACE   &kp RET &trans &kp RALT
+    &trans   &kp EXCL   &kp AT      &kp HASH    &kp DOLLAR  &kp PERCENT /**/    &kp CARET           &kp AMPS        &kp STAR        &kp LBRC    &kp RBRC    &trans  
+    &trans   &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp GRAVE   /**/    &kp TILDE           &kp LPAR        &kp RPAR        &kp LBKT    &kp RBKT    &trans
+    &trans   &none      &none       &none       &none       &none       /**/    &kp C_PLAY_PAUSE    &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE  &kp BSLH    &trans
+                                    &trans      &trans      &trans      /**/    &trans              &mo ADJUST      &trans
                         >;
                 };
+        game {
+// -------------------------------------   -------------------------------------
+// | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
+// | LGUI|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
+// | TAB |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | CAPS|
+//                   | LALT|GAMER|LSHFT|   |LSHFT| XXX | DEL |
+// -------------------------------------   -------------------------------------
+            bindings = <
+    &kp ESC     &kp Q   &kp W   &kp E       &kp R           &kp T           /**/    &kp Y       &kp U   &kp I       &kp O   &kp P       &kp BSPC  
+    &kp LGUI    &kp A   &kp S   &kp D       &kp F           &kp G           /**/    &kp H       &kp J   &kp K       &kp L   &kp SEMI    &kp SQT   
+    &kp TAB     &kp Z   &kp X   &kp C       &kp V           &kp B           /**/    &kp N       &kp M   &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
+                                &kp LALT    &mo GAMERAISE   &mt LSHFT SPACE /**/    &kp LSHFT   &none   &kp DEL
+            >;
+        };
+
+        gameraise {
+// -------------------------------------   -------------------------------------
+// |     |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
+// |     |LS(1)|LS(2)|LS(3)|LS(4)|LS(5)|   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//                   |     |     |     |   |     | ADJ |     |
+// -------------------------------------   -------------------------------------
+            bindings = <
+    &trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      /**/    &trans  &trans      &trans  &trans  &trans  &trans
+    &trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  /**/    &trans  &trans      &trans  &trans  &trans  &trans
+    &trans  &trans      &trans      &trans      &trans      &trans      /**/    &trans  &trans      &trans  &trans  &trans  &trans
+                                    &trans      &trans      &trans      /**/    &trans  &mo ADJUST  &trans
+            >;
+        };
+
+       adjust {
+// -------------------------------------   -------------------------------------
+// |RESET|     |     |     |     |     |   |     |     |     |     |     | DEL |
+// |     |     |BTCLR| BT1 | BT2 |SG(L)|   |SG(R)|LG(L)|LG(D)|LG(U)|LG(R)|     |
+// |SG(S)|     |     |     | GAME|     |   |     | BASE|     |     |     |     |
+//                   |     |     |     |   |     |     |     |
+// -------------------------------------   -------------------------------------
+            bindings = <
+    &bootloader     &none   &none       &none           &none           &none               /**/    &none               &none           &none           &none       &none           &none
+    &none           &none   &bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))    /**/    &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
+    &kp LG(LS(S))   &none   &none       &none           &to GAME        &none               /**/    &none               &to BASE        &none           &none       &none           &none
+                                        &none           &none           &none               /**/    &none               &none           &none
+            >;
+        }; 
         };
 };
