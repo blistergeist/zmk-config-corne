@@ -60,7 +60,8 @@
                                     &trans      &trans      &trans      /**/    &trans              &mo ADJUST      &trans
                         >;
                 };
-        game {
+
+                game {
 // -------------------------------------   -------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
 // | LGUI|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
@@ -72,10 +73,10 @@
     &kp LGUI    &kp A   &kp S   &kp D       &kp F           &kp G           /**/    &kp H       &kp J   &kp K       &kp L   &kp SEMI    &kp SQT   
     &kp TAB     &kp Z   &kp X   &kp C       &kp V           &kp B           /**/    &kp N       &kp M   &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
                                 &kp LALT    &mo GAMERAISE   &mt LSHFT SPACE /**/    &kp LSHFT   &none   &kp DEL
-            >;
-        };
+                    >;
+                };
 
-        gameraise {
+                gameraise {
 // -------------------------------------   -------------------------------------
 // |     |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
 // |     |LS(1)|LS(2)|LS(3)|LS(4)|LS(5)|   |     |     |     |     |     |     |
@@ -87,10 +88,10 @@
     &trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  /**/    &trans  &trans      &trans  &trans  &trans  &trans
     &trans  &trans      &trans      &trans      &trans      &trans      /**/    &trans  &trans      &trans  &trans  &trans  &trans
                                     &trans      &trans      &trans      /**/    &trans  &mo ADJUST  &trans
-            >;
-        };
+                    >;
+                };
 
-       adjust {
+                adjust {
 // -------------------------------------   -------------------------------------
 // |RESET|     |     |     |     |     |   |     |     |     |     |     | DEL |
 // |     |     |BTCLR| BT1 | BT2 |SG(L)|   |SG(R)|LG(L)|LG(D)|LG(U)|LG(R)|     |
@@ -104,5 +105,5 @@
                                         &none           &none           &none               /**/    &none               &none           &none
             >;
         }; 
-        };
+    };
 };
