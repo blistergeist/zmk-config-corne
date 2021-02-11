@@ -5,6 +5,8 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
@@ -38,7 +40,7 @@
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
 // |      | HME | PGU | PGD | END | XXX |   | XXX | LFT | DWN |  UP | RGT |      |
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
     &trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5  /**/    &kp N6  &kp N7      &kp N8      &kp N9  &kp N0      &DEL  
     &trans  &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &none   /**/    &none   &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT   &trans
@@ -52,7 +54,7 @@
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  {  |  }  |      |
 // |      |  -  |  _  |  =  |  +  |  `  |   |  ~  |  (  |  )  |  [  |  ]  |      |
 // |      |     |     |     |     |     |   | PLY |  V+ |  V- | MTE |  \  |      | // TODO: Fix this row when &mkp is committed
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
     &trans   &kp EXCL   &kp AT      &kp HASH    &kp DOLLAR  &kp PERCENT /**/    &kp CARET           &kp AMPS        &kp STAR        &kp LBRC    &kp RBRC    &trans  
     &trans   &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp GRAVE   /**/    &kp TILDE           &kp LPAR        &kp RPAR        &kp LBKT    &kp RBKT    &trans
