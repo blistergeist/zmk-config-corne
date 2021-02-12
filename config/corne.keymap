@@ -18,6 +18,12 @@
 #define GAMERAISE 4
 #define ADJUST 5
 
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+};
+
+
 / {
         keymap {
                 compatible = "zmk,keymap";
