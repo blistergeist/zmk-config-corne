@@ -34,20 +34,21 @@
 // | GUI     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | CTR/TAB |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
 //                       | ALT | LWR | SPC |   | SHF | RSE  | DEL |
-                        bindings = <
+                bindings = <
     &kp ESC         &kp Q   &kp W   &kp E       &kp R       &kp T       /**/    &kp Y       &kp U       &kp I       &kp O   &kp P       &kp BSPC
     &kp LGUI        &kp A   &kp S   &kp D       &kp F       &kp G       /**/    &kp H       &kp J       &kp K       &kp L   &kp SEMI    &kp SQT
     &mt LCTRL TAB   &kp Z   &kp X   &kp C       &kp V       &kp B       /**/    &kp N       &kp M       &kp COMMA   &kp DOT &kp FSLH    &kp ENTER
                                     &kp LALT    &mo LOWER   &kp SPACE   /**/    &kp LSHFT   &mo RAISE   &kp DEL
                         >;
                 };
+
                 raise {
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
 // |      | HME | PGU | PGD | END | XXX |   | XXX | LFT | DWN |  UP | RGT |      |
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
-                        bindings = <
+                bindings = <
     &trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      /**/    &kp N6  &kp N7      &kp N8      &kp N9  &kp N0      &kp DEL
     &trans  &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &none       /**/    &none   &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT   &trans
     &trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      /**/    &kp F6  &kp F7      &kp F8      &kp F9  &kp F10     &kp CAPS
@@ -61,13 +62,14 @@
 // |      |  -  |  _  |  =  |  +  |  `  |   |  ~  |  (  |  )  |  [  |  ]  |      |
 // |      |     |     |     |     |     |   | PLY |  V+ |  V- | MTE |  \  |      | // TODO: Fix this row when &mkp is committed
 //                    |     |     |     |   |     |     |     |
-                        bindings = <
+                bindings = <
     &trans   &kp EXCL   &kp AT      &kp HASH    &kp DOLLAR  &kp PERCENT /**/    &kp CARET           &kp AMPS        &kp STAR        &kp LBRC    &kp RBRC    &trans
     &trans   &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp GRAVE   /**/    &kp TILDE           &kp LPAR        &kp RPAR        &kp LBKT    &kp RBKT    &trans
     &trans   &kp LC(z)  &kp LC(x)   &kp LC(c)   &kp LC(v)   &none       /**/    &kp C_PLAY_PAUSE    &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE  &kp BSLH    &trans
                                     &trans      &trans      &trans      /**/    &trans              &mo ADJUST      &trans
                         >;
                 };
+
                 game {
 // -------------------------------------   -------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
@@ -90,7 +92,7 @@
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 //                   |     |     |     |   |     | ADJ |     |
 // -------------------------------------   -------------------------------------
-            bindings = <
+                bindings = <
     &trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      /**/    &trans      &trans      &trans  &trans  &trans  &trans
     &trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  /**/    &trans      &trans      &trans  &trans  &trans  &trans
     &trans  &trans      &trans      &trans      &trans      &trans      /**/    &trans      &trans      &trans  &trans  &trans  &trans
@@ -105,7 +107,7 @@
 // |SG(S)|     |     |     | GAME|     |   |     | BASE|     |     |     |     |
 //                   |     |     |     |   |     |     |     |
 // -------------------------------------   -------------------------------------
-            bindings = <
+                bindings = <
     &bootloader     &none   &none       &none           &none           &none               /**/    &none               &none           &none           &none       &none           &none
     &none           &none   &bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))    /**/    &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
     &kp LG(LS(S))   &none   &none       &none           &to GAME        &none               /**/    &none               &to BASE        &none           &none       &none           &none
