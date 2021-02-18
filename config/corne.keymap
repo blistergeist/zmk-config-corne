@@ -44,12 +44,12 @@
                 raise {
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
-// |      | HME | PGU | PGD | END | XXX |   | TAB | LFT | DWN |  UP | RGT |      |
+// |      | HME | PGU | PGD | END | XXX |   | XXX | LFT | DWN |  UP | RGT |      |
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
     &trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      /**/    &kp N6  &kp N7      &kp N8      &kp N9  &kp N0      &kp DEL
-    &trans  &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &none       /**/    &kp TAB &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT   &trans
+    &trans  &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &none       /**/    &none   &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT   &trans
     &trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      /**/    &kp F6  &kp F7      &kp F8      &kp F9  &kp F10     &kp CAPS
                                     &trans      &mo ADJUST  &kp LSHFT   /**/    &trans  &trans      &trans
                         >;
