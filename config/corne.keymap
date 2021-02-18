@@ -91,10 +91,10 @@
 //                   |     |     |     |   |     | ADJ |     |
 // -------------------------------------   -------------------------------------
             bindings = <
-    &trans      &kp N1          &kp N2          &kp N3          &kp N4          &kp N5          /**/    &trans      &trans      &trans  &trans  &trans  &trans
-    &trans      &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      /**/    &trans      &trans      &trans  &trans  &trans  &trans
-    &LS(LC(G))  &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   /**/    &trans      &trans      &trans  &trans  &trans  &trans
-                                                &trans          &trans          &trans          /**/    &trans      &mo ADJUST  &trans
+    &trans          &kp N1          &kp N2          &kp N3          &kp N4          &kp N5          /**/    &trans      &trans      &trans  &trans  &trans  &trans
+    &trans          &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      /**/    &trans      &trans      &trans  &trans  &trans  &trans
+    &kp LS(LC(G))   &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   /**/    &trans      &trans      &trans  &trans  &trans  &trans
+                                                    &trans          &trans          &trans          /**/    &trans      &mo ADJUST  &trans
                     >;
                 };
 
