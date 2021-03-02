@@ -42,7 +42,7 @@
 //                       | CTR | LWR | SPC |   | SHF | RSE  | ENT |
                         bindings = <
     &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       /**/    &kp Y       &kp U       &kp I       &kp O       &kp P           &kp BSPC
-    &kp LGUI    &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G       /**/    &kp H       &hm LSHFT J &hm LCTRL K &hm LALT L  &hm LGUI SEMI   &kp SQT
+    &kp LGUI    &hm LGUI A  &hm LALT S  &hm LSHFT D &hm LCTRL F &kp G       /**/    &kp H       &hm LCTRL J &hm LSHFT K &hm LALT L  &hm LGUI SEMI   &kp SQT
     &kp TAB     &kp Z       &kp X       &kp C       &kp V       &kp B       /**/    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH        &kp LALT
                                         &kp LCTRL   &mo LOWER   &kp SPACE   /**/    &kp LSHFT   &mo RAISE   &kp ENTER
                         >;
