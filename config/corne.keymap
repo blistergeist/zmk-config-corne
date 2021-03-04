@@ -46,7 +46,7 @@
     &kp ESC     &kp Q       &kp W       &kp E       &kp R           &kp T       /**/    &kp Y       &kp U           &kp I       &kp O       &kp P           &kp BSPC
     &kp LGUI    &hm LGUI A  &hm LALT S  &hm LSHFT D &hm LCTRL F     &kp G       /**/    &kp H       &hm LCTRL J     &hm LSHFT K &hm LALT L  &hm LGUI SEMI   &kp SQT
     &kp TAB     &kp Z       &kp X       &kp C       &kp V           &kp B       /**/    &kp N       &kp M           &kp COMMA   &kp DOT     &kp FSLH        &kp LALT
-                                        &kp TAB     &hm LOWER ESC   &kp SPACE   /**/    &kp BSPC    &hm RAISE DEL   &kp ENTER
+                                        &kp TAB     &lt LOWER ESC   &kp SPACE   /**/    &kp BSPC    &lt RAISE DEL   &kp ENTER
                         >;
                 };
                 raise {
