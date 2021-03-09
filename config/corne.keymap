@@ -24,10 +24,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CTRL_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             quick_tap_ms = <0>;
             flavor = "balanced";
-            retro-tap;
             bindings = <&kp>, <&kp>;
         };
         hm_ag: alt_gui {
