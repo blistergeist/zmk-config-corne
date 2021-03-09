@@ -20,11 +20,20 @@
 
 / {
     behaviors {
-        hm: garbage_variable {
+        hm_cs: ctrl_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_MODS_CTRL_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hm_ag: alt_gui {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_ALT_GUI";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -44,7 +53,7 @@
 //                             | ESC |               | DEL |
                         bindings = <
     &none   &kp Q       &kp W       &kp E       &kp R           &kp T       /**/    &kp Y       &kp U           &kp I       &kp O       &kp P           &none
-    &none   &hm LGUI A  &hm LALT S  &hm LSHFT D &hm LCTRL F     &kp G       /**/    &kp H       &hm LCTRL J     &hm LSHFT K &hm LALT L  &hm LGUI SEMI   &kp SQT
+    &none   &hm_ag LGUI A  &hm_ag LALT S  &hm_cs LSHFT D &hm_cs LCTRL F     &kp G       /**/    &kp H       &hm_cs LCTRL J     &hm_cs LSHFT K &hm_ag LALT L  &hm_ag LGUI SEMI   &kp SQT
     &none   &kp Z       &kp X       &kp C       &kp V           &kp B       /**/    &kp N       &kp M           &kp COMMA   &kp DOT     &kp FSLH        &kp CAPS
                                     &kp TAB     &lt LOWER ESC   &kp SPACE   /**/    &kp BSPC    &lt RAISE DEL   &kp ENTER
                         >;
@@ -57,7 +66,7 @@
 //                    |     |     |     |   |     |     |     |
                         bindings = <
     &trans  &kp N1          &kp N2          &kp N3          &kp N4          &kp N5      /**/    &kp N6  &kp N7          &kp N8          &kp N9      &kp N0          &trans
-    &trans  &hm LGUI HOME   &hm LALT PG_UP  &hm LSHFT PG_DN &hm LCTRL END   &none       /**/    &none   &hm LCTRL LEFT  &hm LSHFT DOWN  &hm LALT UP &hm LGUI RIGHT  &trans
+    &trans  &hm_ag LGUI HOME   &hm_ag LALT PG_UP  &hm_cs LSHFT PG_DN &hm_cs LCTRL END   &none       /**/    &none   &hm_cs LCTRL LEFT  &hm_cs LSHFT DOWN  &hm_ag LALT UP &hm_ag LGUI RIGHT  &trans
     &trans  &kp F1          &kp F2          &kp F3          &kp F4          &kp F5      /**/    &kp F6  &kp F7          &kp F8          &kp F9      &kp F10         &trans
                                             &trans          &mo ADJUST      &trans      /**/    &trans  &trans          &trans
                         >;
