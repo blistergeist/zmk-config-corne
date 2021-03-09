@@ -20,7 +20,7 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        hm: garbage_variable {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
