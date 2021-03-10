@@ -52,10 +52,10 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
                         bindings = <
-    &none   &kp Q       &kp W       &kp E       &kp R           &kp T       /**/    &kp Y       &kp U           &kp I       &kp O       &kp P           &none
-    &none   &hm_ag LGUI A  &hm_ag LALT S  &hm_cs LSHFT D &hm_cs LCTRL F     &kp G       /**/    &kp H       &hm_cs LCTRL J     &hm_cs LSHFT K &hm_ag LALT L  &hm_ag LGUI SEMI   &kp SQT
-    &none   &kp Z       &kp X       &kp C       &kp V           &kp B       /**/    &kp N       &kp M           &kp COMMA   &kp DOT     &kp FSLH        &kp CAPS
-                                    &kp TAB     &lt LOWER ESC   &kp SPACE   /**/    &kp BSPC    &lt RAISE DEL   &kp ENTER
+    &none   &kp Q           &kp W           &kp E           &kp R           &kp T       /**/    &kp Y       &kp U           &kp I           &kp O           &kp P               &none
+    &none   &hm_ag LGUI A   &hm_ag LALT S   &hm_cs LSHFT D  &hm_cs LCTRL F  &kp G       /**/    &kp H       &hm_cs LCTRL J  &hm_cs LSHFT K  &hm_ag LALT L   &hm_ag LGUI SEMI    &kp SQT
+    &none   &kp Z           &kp X           &kp C           &kp V           &kp B       /**/    &kp N       &kp M           &kp COMMA       &kp DOT         &kp FSLH            &kp CAPS
+                                            &kp TAB         &lt LOWER ESC   &kp SPACE   /**/    &kp BSPC    &lt RAISE DEL   &kp ENTER
                         >;
                 };
                 raise {
@@ -65,10 +65,10 @@
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | CAPS |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-    &trans  &kp N1          &kp N2          &kp N3          &kp N4          &kp N5      /**/    &kp N6  &kp N7          &kp N8          &kp N9      &kp N0          &trans
-    &trans  &hm_ag LGUI HOME   &hm_ag LALT PG_UP  &hm_cs LSHFT PG_DN &hm_cs LCTRL END   &none       /**/    &none   &hm_cs LCTRL LEFT  &hm_cs LSHFT DOWN  &hm_ag LALT UP &hm_ag LGUI RIGHT  &trans
-    &trans  &kp F1          &kp F2          &kp F3          &kp F4          &kp F5      /**/    &kp F6  &kp F7          &kp F8          &kp F9      &kp F10         &trans
-                                            &trans          &mo ADJUST      &trans      /**/    &trans  &trans          &trans
+    &trans  &kp N1              &kp N2              &kp N3              &kp N4              &kp N5      /**/    &kp N6  &kp N7              &kp N8              &kp N9          &kp N0              &trans
+    &trans  &hm_ag LGUI HOME    &hm_ag LALT PG_UP   &hm_cs LSHFT PG_DN  &hm_cs LCTRL END    &none       /**/    &none   &hm_cs LCTRL LEFT   &hm_cs LSHFT DOWN   &hm_ag LALT UP  &hm_ag LGUI RIGHT   &trans
+    &trans  &kp F1              &kp F2              &kp F3              &kp F4              &kp F5      /**/    &kp F6  &kp F7              &kp F8              &kp F9          &kp F10             &trans
+                                                    &trans              &mo ADJUST          &trans      /**/    &trans  &trans              &trans
                         >;
                 };
 
@@ -93,10 +93,10 @@
 //                   | LALT| AOER|SH/SP|   |LSHFT| XXX | DEL |
 // -------------------------------------   -------------------------------------
             bindings = <
-    &kp ESC     &kp Q   &kp W   &kp E       &kp R           &kp T           /**/    &kp Y       &kp U       &kp I       &kp O   &kp P       &kp BSPC
-    &kp TAB     &kp A   &kp S   &kp D       &kp F           &kp G           /**/    &kp H       &kp J       &kp K       &kp L   &kp SEMI    &kp SQT
-    &kp LCTRL   &kp Z   &kp X   &kp C       &kp V           &kp B           /**/    &kp N       &kp M       &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
-                                &kp LALT    &mo AOERAISE    &mt LSHFT SPACE /**/    &kp LSHFT   &none       &kp DEL
+    &kp ESC     &kp Q   &kp W   &kp E       &kp R               &kp T           /**/    &kp Y       &kp U       &kp I       &kp O   &kp P       &kp BSPC
+    &kp TAB     &kp A   &kp S   &kp D       &kp F               &kp G           /**/    &kp H       &kp J       &kp K       &kp L   &kp SEMI    &kp SQT
+    &kp LCTRL   &kp Z   &kp X   &kp C       &kp V               &kp B           /**/    &kp N       &kp M       &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
+                                &kp LALT    &lt AOERAISE ESC    &mt LSHFT SPACE /**/    &kp LSHFT   &none       &kp DEL
                     >;
                 };
 
