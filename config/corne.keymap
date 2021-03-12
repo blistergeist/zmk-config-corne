@@ -44,7 +44,7 @@
                 compatible = "zmk,keymap";
 
                 base {
-// GASC home row mods. Layer key mods.
+// GASC home row mods. Layer key mods. Mod tap for zxcv. Mod tap for backspace/shift
 // -----------------------------------------------------------------------------------------
 // |    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |      |
 // |    |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
@@ -52,17 +52,10 @@
 //                       | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                             | ESC |               | DEL |
                         bindings = <
-<<<<<<< HEAD
     &none   &kp Q           &kp W           &kp E           &kp R           &kp T       /**/    &kp Y           &kp U           &kp I           &kp O           &kp P               &none
     &none   &hm_ag LGUI A   &hm_ag LALT S   &hm_cs LSHFT D  &hm_cs LCTRL F  &kp G       /**/    &kp H           &hm_cs LCTRL J  &hm_cs LSHFT K  &hm_ag LALT L   &hm_ag LGUI SEMI    &kp SQT
     &none   &mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) V     &kp B       /**/    &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH            &kp CAPS
                                             &kp TAB         &lt LOWER ESC   &kp SPACE   /**/    &mt LSHFT BSPC  &lt RAISE DEL   &kp ENTER
-=======
-    &none   &kp Q           &kp W           &kp E           &kp R           &kp T       /**/    &kp Y       &kp U           &kp I           &kp O           &kp P               &none
-    &none   &hm_ag LGUI A   &hm_ag LALT S   &hm_cs LSHFT D  &hm_cs LCTRL F  &kp G       /**/    &kp H       &hm_cs LCTRL J  &hm_cs LSHFT K  &hm_ag LALT L   &hm_ag LGUI SEMI    &kp SQT
-    &none   &kp Z           &kp X           &kp C           &kp V           &kp B       /**/    &kp N       &kp M           &kp COMMA       &kp DOT         &kp FSLH            &kp CAPS
-                                            &kp TAB         &lt LOWER ESC   &kp SPACE   /**/    &kp BSPC    &lt RAISE DEL   &kp ENTER
->>>>>>> 573b40be5e9d7d651508cd43f37c7e342d9b5558
                         >;
                 };
                 raise {
