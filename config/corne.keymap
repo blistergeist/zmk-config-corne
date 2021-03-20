@@ -131,16 +131,16 @@
             };
             mineraise {
 // -------------------------------------   -------------------------------------
-// |     |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
+// | F3  |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
 // |     |  6  |  7  |  8  |  9  |  0  |   |     |     |     |     |     |     |
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 //                   |     |     |     |   |     | ADJ |     |
 // -------------------------------------   -------------------------------------
         bindings = <
-    &kp N0          &kp N1          &kp N2          &kp N3          &kp N4          &kp N5          /**/    &trans      &trans      &trans  &trans  &trans  &trans
-    &kp LS(N0)      &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      /**/    &trans      &trans      &trans  &trans  &trans  &trans
-    &kp LS(LC(G))   &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   /**/    &trans      &trans      &trans  &trans  &trans  &trans
-                                                    &trans          &trans          &trans          /**/    &trans      &mo ADJUST  &trans
+    &kp F3      &kp N1      &kp N2  &kp N3  &kp N4  &kp N5  /**/    &trans      &trans      &trans  &trans  &trans  &trans
+    &trans      &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  /**/    &trans      &trans      &trans  &trans  &trans  &trans
+    &trans      &trans      &trans  &trans  &trans  &trans  /**/    &trans      &trans      &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans  /**/    &trans      &mo ADJUST  &trans
                     >;
             };
             adjust {
