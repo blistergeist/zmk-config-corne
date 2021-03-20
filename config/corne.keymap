@@ -16,7 +16,9 @@
 #define LOWER 2
 #define AOE 3
 #define AOERAISE 4
-#define ADJUST 5
+#define MINE 5
+#define MINERAISE 6
+#define ADJUST 7
 
 / {
     behaviors {
@@ -54,7 +56,7 @@
         bindings = <
     &none   &kp Q           &kp W           &kp E           &kp R           &kp T       /**/    &kp Y           &kp U           &kp I           &kp O           &kp P               &none
     &none   &hm_ag LGUI A   &hm_ag LALT S   &hm_cs LSHFT D  &hm_cs LCTRL F  &kp G       /**/    &kp H           &hm_cs LCTRL J  &hm_cs LSHFT K  &hm_ag LALT L   &hm_ag LGUI SEMI    &kp SQT
-    &none   &hm_ag LC(Z) Z     &hm_ag LC(X) X     &hm_ag LC(C) C     &hm_ag LC(V) V     &kp B       /**/    &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH            &kp CAPS
+    &none   &hm_ag LC(Z) Z  &hm_ag LC(X) X  &hm_ag LC(C) C  &hm_ag LC(V) V  &kp B       /**/    &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH            &kp CAPS
                                             &kp TAB         &lt LOWER ESC   &kp SPACE   /**/    &mt LSHFT BSPC  &lt RAISE DEL   &kp ENTER
                         >;
             };
@@ -113,17 +115,45 @@
                                                     &trans          &trans          &trans          /**/    &trans      &mo ADJUST  &trans
                     >;
             };
+            mine {
+// -------------------------------------   -------------------------------------
+// |  `  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
+// | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
+// | CTRL|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | CAPS|
+//                   |SPACE| MNRS|LSHFT|   |LSHFT| XXX |ENTER|
+// -------------------------------------   -------------------------------------
+        bindings = <
+    &kp TILDE   &kp Q   &kp W   &kp E       &kp R               &kp T           /**/    &kp Y           &kp U   &kp I       &kp O       &kp P       &none
+    &kp TAB     &kp A   &kp S   &kp D       &kp F               &kp G           /**/    &kp H           &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
+    &kp LCTRL   &kp Z   &kp X   &kp C       &kp V               &kp B           /**/    &kp N           &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
+                                &kp SPACE   &lt MINERAISE ESC   &kp LSHFT       /**/    &mt LSHFT BSPC  &kp DEL &kp ENTER
+                    >;
+            };
+            mineraise {
+// -------------------------------------   -------------------------------------
+// |     |  1  |  2  |  3  |  4  |  5  |   |     |     |     |     |     |     |
+// |     |  6  |  7  |  8  |  9  |  0  |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//                   |     |     |     |   |     | ADJ |     |
+// -------------------------------------   -------------------------------------
+        bindings = <
+    &kp N0          &kp N1          &kp N2          &kp N3          &kp N4          &kp N5          /**/    &trans      &trans      &trans  &trans  &trans  &trans
+    &kp LS(N0)      &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      /**/    &trans      &trans      &trans  &trans  &trans  &trans
+    &kp LS(LC(G))   &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   /**/    &trans      &trans      &trans  &trans  &trans  &trans
+                                                    &trans          &trans          &trans          /**/    &trans      &mo ADJUST  &trans
+                    >;
+            };
             adjust {
 // -------------------------------------   -------------------------------------
 // |RESET|     |     |     |     |     |   |     |     |     |     |     |     |
 // |     |     |BTCLR| BT1 | BT2 |SG(L)|   |SG(R)|LG(L)|LG(D)|LG(U)|LG(R)|     |
-// |SG(S)|     |     |     | AOE |     |   |     | BASE|     |     |     |     |
+// |SG(S)|     |     |     | AOE | MINE|   |     | BASE|     |     |     |     |
 //                   |     |     |     |   |     |     |     |
 // -------------------------------------   -------------------------------------
         bindings = <
     &bootloader     &none   &none       &none           &none           &none               /**/    &none               &none           &none           &none       &none           &none
     &none           &none   &bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))    /**/    &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
-    &kp LG(LS(S))   &none   &none       &none           &to AOE         &none               /**/    &none               &to BASE        &none           &none       &none           &none
+    &kp LG(LS(S))   &none   &none       &none           &to AOE         &to MINE            /**/    &none               &to BASE        &none           &none       &none           &none
                                         &none           &none           &none               /**/    &none               &none           &none
             >;
         };
