@@ -15,11 +15,12 @@
 #define COLEMAK 1
 #define RAISE 2
 #define LOWER 3
-#define AOE 4
-#define AOERAISE 5
-#define MINE 6
-#define MINERAISE 7
-#define ADJUST 8
+#define NUMPAD 4
+#define AOE 5
+#define AOERAISE 6
+#define MINE 7
+#define MINERAISE 8
+#define ADJUST 9
 
 / {
     behaviors {
@@ -58,7 +59,7 @@
     &none   &kp Q           &mt_l LC(W) W   &kp E           &mt_l LC(R) R   &mt_l LC(T) T   /**/    &kp Y           &kp U           &mt_l LC(I) I  &kp O        &kp P           &none
     &none   &mt_l LGUI A    &mt_l LALT S    &mt_s LSHFT D   &mt_s LCTRL F   &kp G           /**/    &kp H           &mt_s LCTRL J   &mt_s LSHFT K  &mt_l LALT L &mt_l LGUI SEMI &kp SQT
     &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &mt_l LC(N) N   &kp M           &kp COMMA      &kp DOT      &kp FSLH        &kp CAPS
-                                            &kp TAB         &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC  &lt RAISE DEL   &kp ENTER
+                                            &lt NUMPAD TAB  &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC  &lt RAISE DEL   &kp ENTER
                         >;
             };
 
@@ -71,10 +72,10 @@
 //                  | TAB | LWR | SPC |   | ENT | RSE | BSPC|
 //                        | ESC |               | DEL |
         bindings = <
-    &none   &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G           /**/    &kp J   &kp L           &kp U           &kp Y        &kp SEMI       &none
-    &none   &mt_l LGUI A   &mt_l LALT R     &mt_s LSHFT S   &mt_s LCTRL T   &kp D           /**/    &kp H   &mt_s LCTRL N   &mt_s LSHFT E   &mt_l LALT I &mt_l LGUI O   &kp SQT
-    &none   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &kp K   &kp M           &kp COMMA       &kp DOT      &kp FSLH       &kp CAPS
-                                            &kp TAB         &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC  &lt RAISE DEL   &kp ENTER
+    &none   &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G           /**/    &kp J                   &kp L           &kp U           &kp Y        &kp SQT        &none
+    &none   &mt_l LGUI A   &mt_l LALT R     &mt_s LSHFT S   &mt_s LCTRL T   &kp D           /**/    &kp H                   &mt_s LCTRL N   &mt_s LSHFT E   &mt_l LALT I &mt_l LGUI O   &kp SEMI
+    &none   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &kp K                   &kp M           &kp COMMA       &kp DOT      &kp FSLH       &kp CAPS
+                                            &kp TAB         &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC          &lt RAISE DEL   &kp ENTER
                         >;
             };
 
@@ -107,6 +108,20 @@
                                     &trans      &trans      &trans      /**/    &trans              &mo ADJUST      &trans
                         >;
             };
+
+            numpad {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |       |     |     |   [  |  ]  |  *   |   | VOL+ |  7    |  8    |  9   |       |      |
+// |       |  -  |  _  |   =  |  +  |  `   |   | VOL- |  4    |  5    |  6   |   |   |      |
+// |       |  {  |  }  |   (  |  )  |  ~   |   | PLAY |  1    |  2    |  3   |   \   |      |
+//                     |      |     |      |   | MUTE |  0    |  .    |
+        bindings = <
+    &none	&none	    &none       &kp LBKT	&kp RBKT  	&kp STAR    /**/    &kp C_VOL_UP        &kp N7  &kp N8	&kp N9  &none	    &none
+	&none   &kp MINUS	&kp UNDER  	&kp EQUAL   &kp RPAR   	&kp GRAVE   /**/    &kp C_VOL_DN        &kp N4	&kp N5  &kp N6	&kp PIPE	&none
+	&none   &kp LBRC    &kp RBRC	&kp LPAR    &kp RPAR   	&kp TILDE   /**/	&kp C_PLAY_PAUSE    &kp N1	&kp N2	&kp N3	&kp BSLH	&none
+	                    		    &none       &trans      &trans      /**/    &none               &kp N0  &kp DOT
+                        >;
+            };            
             aoe {
 // -------------------------------------   -------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
