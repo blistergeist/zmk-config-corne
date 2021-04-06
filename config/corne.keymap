@@ -75,7 +75,7 @@
     &none   &kp Q          &mt_l LC(W) W    &kp F           &kp P           &kp G           /**/    &kp J                   &kp L           &kp U           &kp Y        &kp SQT        &none
     &none   &mt_l LGUI A   &mt_l LALT R     &mt_s LSHFT S   &mt_s LCTRL T   &kp D           /**/    &kp H                   &mt_s LCTRL N   &mt_s LSHFT E   &mt_l LALT I &mt_l LGUI O   &kp SEMI
     &none   &mt_l LC(Z) Z  &mt_l LC(X) X    &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &kp K                   &kp M           &kp COMMA       &kp DOT      &kp FSLH       &kp CAPS
-                                            &kp TAB         &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC          &lt RAISE DEL   &kp ENTER
+                                            &lt NUMPAD TAB  &lt LOWER ESC   &kp SPACE       /**/    &mt LSHFT BSPC          &lt RAISE DEL   &kp ENTER
                         >;
             };
 
