@@ -96,7 +96,7 @@
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |   |      |  HOME |  PGDN | PGUP |  END  |      |
 //                     |      |ADJUST|      |   |      |       |       |      |
         bindings = <
-    &none   &kp EXCL   		&kp AT       	&kp HASH    	&kp DOLLAR  	&kp PERCENT /**/    &kp CARET   &kp AMPS        	&kp STAR        	&none       	&none				&none
+    &none   &kp EXCL   		&kp AT       	&kp HASH    	&kp DOLLAR  	&kp PERCENT /**/    &kp CARET   &kp AMPS        	&kp STAR        	&kp UNDER       &kp MINUS			&none
 	&none   &mt_l LGUI F1   &mt_l LALT F2   &mt_s LSHFT F3  &mt_s LCTRL F4  &kp F5     	/**/    &none   	&mt_s LCTRL LEFT   	&mt_s LSHFT DOWN   	&mt_l LALT UP  	&mt_l LGUI RIGHT	&none
 	&none   &kp F6  		&kp F7          &kp F8         	&kp F9          &kp F10 	/**/    &none   	&kp HOME           	&kp PG_DN       	&kp PG_UP       &kp END       		&none
 	                                        &trans          &mo ADJUST      &trans      /**/    &trans  	&trans       		&none
@@ -110,10 +110,10 @@
 // |       |     |     |   [  |  ]  |  ~   |   |  =   |  1    |  2    |  3   |   \   |      |
 //                     |      |     |      |   | SPACE| ADJ/0 |  .    |
         bindings = <
-    &none	&none	&none	&kp LBKT	&kp RBKT  	&none    	/**/	&kp PLUS   	    &kp N7  		&kp N8	&kp N9  &kp STAR	&none
-	&none   &none	&none	&kp LPAR    &kp RPAR   	&kp GRAVE   /**/    &kp MINUS	    &kp N4			&kp N5  &kp N6	&kp PIPE	&none
-	&none   &none	&none	&kp LBRC    &kp RBRC   	&kp TILDE   /**/	&kp EQUAL	    &kp N1			&kp N2	&kp N3	&kp BSLH	&none
-	                    	&none       &trans      &trans      /**/    &kp SPACE		&mt ADJUST N0	&kp DOT
+    &none	&none	    &none	    &kp LBKT	&kp RBKT  	&none    	/**/	&kp PLUS   	    &kp N7  		&kp N8	&kp N9  &kp STAR	&none
+	&none   &kp MINUS	&kp UNDER	&kp LPAR    &kp RPAR   	&kp GRAVE   /**/    &kp MINUS	    &kp N4			&kp N5  &kp N6	&kp PIPE	&none
+	&none   &none	    &none	    &kp LBRC    &kp RBRC   	&kp TILDE   /**/	&kp EQUAL	    &kp N1			&kp N2	&kp N3	&kp BSLH	&none
+	                    	        &none       &trans      &trans      /**/    &kp SPACE		&mt ADJUST N0	&kp DOT
                         >;
             };
             aoe {
@@ -125,7 +125,7 @@
 // -------------------------------------   -------------------------------------
         bindings = <
     &kp ESC     &kp Q   &kp W   &kp E       &kp R               &kp T           /**/    &kp Y       	&kp U       &kp I       &kp O   &kp P       &kp BSPC
-    &kp LALT     &kp A   &kp S   &kp D       &kp F               &kp G           /**/    &kp H       	&kp J       &kp K       &kp L   &kp SEMI    &kp SQT
+    &kp LALT    &kp A   &kp S   &kp D       &kp F               &kp G           /**/    &kp H       	&kp J       &kp K       &kp L   &kp SEMI    &kp SQT
     &kp LCTRL   &kp Z   &kp X   &kp C       &kp V               &kp B           /**/    &kp N       	&kp M       &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
                                 &kp TAB		&lt AOERAISE ESC    &mt LSHFT SPACE /**/    &mt LSHFT BSPC	&kp DEL     &kp ENTER
                     >;
