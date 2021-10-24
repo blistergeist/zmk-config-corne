@@ -209,10 +209,10 @@
 //                   |     |     |     |   |     |     |     |
 // -------------------------------------   -------------------------------------
         bindings = <
-    &bootloader     &none   &none       &none           &none           &none               /**/    &none               &none           &none           &none       &none           &none
-    &none           &none   &bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))    /**/    &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
-    &kp LG(LS(S))   &none   &none       &none           &to AOE         &to MINE            /**/    &to QWERTY         	&none      		&none           &none       &none           &none
-                                        &none           &none           &none               /**/    &none               &none           &none
+    &bootloader &none   &none       &none           &none           &none               /**/    &none               &none           &none           &none       &none           &none
+    &none       &none   &bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))    /**/    &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
+    &kp PSCRN	&none   &none       &none           &to AOE         &to MINE            /**/    &to QWERTY         	&none      		&none           &none       &none           &none
+                                	&none           &none           &none               /**/    &none               &none           &none
             >;
         };
     };
