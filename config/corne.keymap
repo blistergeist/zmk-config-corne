@@ -99,7 +99,7 @@
     &none	&none		&none		&none		&none  		&none    	/**/	&kp PLUS   	    &kp N7  		&kp N8	&kp N9  &kp STAR	&none
 	&none   &kp LGUI	&kp LALT	&kp LSHFT   &kp LCTRL  	&none   	/**/    &kp EQUAL	    &kp N4			&kp N5  &kp N6	&kp PIPE	&none
 	&none   &none		&none		&none    	&none   	&none   	/**/	&kp MINUS	    &kp N1			&kp N2	&kp N3	&kp BSLH	&none
-	                    			&none       &trans      &none      	/**/    &kp N0			&mt ADJUST DOT	&none
+	                    			&none       &trans      &none      	/**/    &kp N0			&lt ADJUST DOT	&none
                         >;
             };
 
@@ -113,7 +113,7 @@
     &none	&none		&none		&none		&none  		&none    	/**/    &kp LBRC	&kp LPAR	&kp RPAR    &kp LBKT    &kp RBKT	&none
 	&none   &kp LGUI	&kp LALT	&kp LSHFT   &kp LCTRL   &none   	/**/    &kp RBRC	&kp LEFT   	&kp DOWN	&kp UP		&kp RIGHT	&none
 	&none   &none		&none		&none    	&none   	&none   	/**/    &none   	&kp HOME    &kp PG_DN   &kp PG_UP   &kp END		&none
-	                    			&none       &trans      &none      	/**/    &none  		&mt ADJUST  &none
+	                    			&none       &trans      &none      	/**/    &none  		&mo ADJUST  &none
                         >;
             };
 
@@ -127,7 +127,7 @@
     &none	&kp	EXCL	&kp AT		&kp HASH	&kp DLLR	&kp PRCNT  	/**/	&none	&none  		&none		&none  		&none		&none
 	&none   &kp CARET	&kp AMPS	&kp UNDER   &kp GRAVE   &kp TILDE   /**/    &none	&kp LCTRL	&kp LSHFT	&kp LALT	&kp LGUI	&none
 	&none   &none		&none		&none    	&none   	&none   	/**/	&none	&none		&none		&none		&none		&none
-	                    			&none       &mt ADJUST  &none      	/**/    &none	&trans		&none
+	                    			&none       &mo ADJUST  &none      	/**/    &none	&trans		&none
                         >;
             };
 
@@ -141,7 +141,7 @@
     &none	&kp	F1	&kp F2	&kp F3	&kp F4		&none  	/**/	&none	&none  		&none		&none  		&none		&none
 	&none   &kp F5	&kp F6	&kp F7	&kp F8  	&none	/**/    &none	&kp LCTRL	&kp LSHFT	&kp LALT	&kp LGUI	&none
 	&none   &kp F9	&kp F10	&kp F11 &kp F12		&none   /**/	&none	&none		&none		&none		&none		&none
-	                		&none   &mt ADJUST 	&none  	/**/    &none	&trans		&none
+	                		&none   &mo ADJUST 	&none  	/**/    &none	&trans		&none
                         >;
             };
 
@@ -205,14 +205,14 @@
 // -------------------------------------   -------------------------------------
 // |RESET|     |     |     |     |     |   |     |     |     |     |     |     |
 // |     |     |BTCLR| BT1 | BT2 |SG(L)|   |SG(R)|LG(L)|LG(D)|LG(U)|LG(R)|     |
-// |SG(S)|     |     |     | AOE | MINE|   |COLEM|QWERT|     |     |     |     |
+// |PSCRN|     |     |     | AOE | MINE|   |COLEM|QWERT|     |     |     |     |
 //                   |     |     |     |   |     |     |     |
 // -------------------------------------   -------------------------------------
         bindings = <
     &bootloader &none   &none       &none           &none           &none               /**/    &none               &none           &none           &none       &none           &none
     &none       &none   &bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))    /**/    &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
     &kp PSCRN	&none   &none       &none           &to AOE         &to MINE            /**/    &to QWERTY         	&none      		&none           &none       &none           &none
-                                	&none           &none           &none               /**/    &none               &none           &none
+                                	&none           &trans          &none               /**/    &none               &trans           &none
             >;
         };
     };
