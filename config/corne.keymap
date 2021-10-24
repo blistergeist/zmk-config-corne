@@ -66,7 +66,7 @@
 //                  | TAB | NUM | NAV |   | FUN | SYM | ENT|
 //                        | ESC | SPC |   | BSP | DEL |
         bindings = <
-    &none   &kp Q           &mt_l LC(W) W   &kp E           &mt_l LC(R) R   &mt_l LC(T) T   /**/    &kp Y           &mt_L LC(U) U   &mt_l LC(I) I  &kp O        &kp P           &none
+    &none   &kp Q           &mt_l LC(W) W   &kp E           &mt_l LC(R) R   &mt_l LC(T) T   /**/    &kp Y           &mt_l LC(U) U   &mt_l LC(I) I  &kp O        &kp P           &none
     &none   &mt_l LGUI A    &mt_l LALT S    &mt_s LSHFT D   &mt_s LCTRL F   &kp G           /**/    &kp H           &mt_s LCTRL J   &mt_s LSHFT K  &mt_l LALT L &mt_l LGUI SEMI &kp SQT
     &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   /**/    &mt_l LC(N) N   &kp M           &kp COMMA      &kp DOT      &kp FSLH        &kp CAPS
                                             &kp TAB         &lt NUM ESC   	&lt NAV SPACE   /**/    &lt FUN BSPC  	&lt SYM DEL   	&kp ENTER
